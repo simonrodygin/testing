@@ -1,0 +1,4 @@
+fun waiting() {
+        WebDriverWait(driver, java.time.Duration.ofSeconds(5)).until<Any>
+        { (it as JavascriptExecutor).executeScript("return document.readyState") as String == "complete" }
+    }
