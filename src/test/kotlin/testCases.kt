@@ -39,6 +39,7 @@ class TestGoogleSearch {
 
         GoogleMainPage(driver).imLucky()
 
+        \\проверяю, что мы на нужной странице по специфичному для данной страницы элементу (аналогично в остальных тестах)
         val element = driver.findElement(By.id("archive-link"))
 
         assert(element.isDisplayed)
