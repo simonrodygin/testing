@@ -55,7 +55,7 @@ class TestGoogleSearch {
 
         GoogleMainPage(driver).tapSearchButton()
 
-        val element = driver.findElement(By.xpath("//*[@id=\"topstuff\"]/div/div/p[2]"))
+        val element = driver.findElement(By.cssSelector("#topstuff > div > div > p:nth-child(2)"))
 
         assert(element.isDisplayed)
     }
@@ -65,11 +65,9 @@ class TestGoogleSearch {
 
         GoogleMainPage(driver).start()
 
-        GoogleMainPage(driver).typeSearch("z jib,cz c hfcrkflrjq")
+        GoogleMainPage(driver).typeSearch("z jib,cz c hfcrkflrjq\n")
 
-        GoogleMainPage(driver).tapSearchButton()
-
-        val element = driver.findElement(By.xpath("//*[@id=\"oFNiHe\"]/p/span"))
+        val element = driver.findElement(By.cssSelector("#oFNiHe > p > span"))
 
         assert(element.isDisplayed)
     }

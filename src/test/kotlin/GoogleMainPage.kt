@@ -24,12 +24,12 @@ class GoogleMainPage(private val driver: WebDriver) {
     }
 
     fun imLucky(): GoogleMainPage {
-        driver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[2]")).click()
+        driver.findElement(By.cssSelector("body > div.L3eUgb > div.o3j99.ikrT4e.om7nvf > form > div:nth-child(1) > div.A8SBwf > div.FPdoLc.lJ9FBc > center > input[type=submit]:nth-child(2)")).click()
         return this
     }
 
     fun tapSearchButton(): GoogleMainPage {
-        driver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]")).click()
+        driver.findElement(By.cssSelector("body > div.L3eUgb > div.o3j99.ikrT4e.om7nvf > form > div:nth-child(1) > div.A8SBwf > div.FPdoLc.lJ9FBc > center > input.gNO89b")).click()
         return this
     }
 
